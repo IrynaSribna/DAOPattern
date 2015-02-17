@@ -9,7 +9,7 @@ public interface DocumentDAO {
 
     public void insertDocument(Document document) throws Exception;
 
-    public Document findDocument(Integer id);
+    public Document findDocument(Integer id) throws Exception;
 
     public void deleteDocument(Integer id);
 }

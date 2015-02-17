@@ -34,5 +34,14 @@ public class App
         documentDAO.insertDocument(doc3);
         documentDAO.deleteDocument(doc3.getId());
 
+        DocumentDAO fileDAO = DAOFactory.getDocumentDAO("FileSystem");
+        fileDAO.insertDocument(doc2);
+        fileDAO.insertDocument(doc);
+        Document fileFromFileSystem = fileDAO.findDocument(doc.getId());
+        System.out.println("--------------------- File from file system ------------------------------");
+        System.out.println(fileFromFileSystem.toString());
+        fileDAO.deleteDocument(doc2.getId());
+
+
     }
 }
